@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet } from "react-native";
 
-const BusinessNearbyScene = () => {
+const ListScene = () => {
     return (
         <View>
-            <Text>Nearby Scene</Text>
+            <Text>ListScene</Text>
         </View>
     );
-};
+}
 
 const styles = StyleSheet.create({});
 
-export default BusinessNearbyScene;
+export default ListScene;
