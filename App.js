@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Provider } from "./src/context/BusinessContext";
+import { Provider } from "./src/context/ProductContext";
 import HomeScene from './src/scene/HomeScene';
 
 const Stack = createStackNavigator();
