@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Provider } from "./src/context/ProductContext";
 import HomeScene from './src/scene/HomeScene';
+import ItemDetailScene from './src/scene/ItemDetailScene';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,13 @@ const App = () => {
                 component={HomeScene}
                 options={{
                     title: 'Inicio'
+                }}
+            />
+            <Stack.Screen 
+                name="ItemDetail" 
+                component={ItemDetailScene}
+                options={{
+                    title: 'Producto'
                 }}
             />
         </Stack.Navigator>

@@ -4,7 +4,7 @@ import { Context } from "../context/ProductContext";
 import SearchBar from '../component/SearchBar';
 import ListItem from '../component/ListItem';
 
-const ListScene = () => {
+const ListScene = ({ navigation }) => {
     const { state, getProducts} = useContext(Context);
 
     useEffect(() => {
@@ -17,11 +17,11 @@ const ListScene = () => {
             <FlatList
                 showsVerticalScrollIndicator={false}
                 numColumns={2}
-                data={state}
+                data={state.list}
                 keyExtractor={item => item.id.toString()}
                 renderItem={({ item }) => {
                     return(
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('ItemDetail', { id: item.id })}>
                             <ListItem item={item}/>
                         </TouchableOpacity>
                     );

@@ -8,7 +8,7 @@ const ListItem = ({ item }) => {
             <View style={styles.textContainerStyle}>
                 <Text>{item.name}</Text>
                 <Text style={styles.subtitleStyle}>{item.store}</Text>
-                <Text style={styles.priceStyle}>${item.price}</Text>
+                <Text style={styles.priceStyle}>${item.offers}</Text>
             </View>
         </View>
     );
@@ -20,13 +20,16 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     textContainerStyle:{
-        backgroundColor: '#F0EEEE'
+        backgroundColor: '#F0EEEE',
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5
     },
     image: {
         height: 180,
         width: 150,
-        borderRadius: 4,
-        marginBottom: 5
+        marginBottom: 5,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5
     },
     subtitleStyle: {
         fontSize: 9,
